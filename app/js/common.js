@@ -51,9 +51,17 @@ $(document).ready(function(){
         $(".sing-in__modal").arcticmodal()
     });
 
-    $('.list-grid__item').on("click", function(e){
+    $('.list-grid__item').on("click", function(){
     	$('.list-grid__item').removeClass("list-grid__item-active");
         $(this).addClass("list-grid__item-active");
+    });
+
+    $(".btn-filters").on("click", function(){
+        $(".main-holder").addClass("main__active");
+    });
+
+    $(".overlay-close").on("click", function(){
+        $(".main-holder").removeClass("main__active");
     });
 
 });
